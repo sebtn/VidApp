@@ -1,10 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-import {apiKey} from '././api.js'
 
 import  '././styles/app.scss' 
+import VidApp from '././components/vidApp' 
 
-'use strict'
 
-ReactDOM.render(<h3>Using Redux</h3>, document.getElementById('root'))
+ReactDOM.render(<VidApp />, document.getElementById('root'))
