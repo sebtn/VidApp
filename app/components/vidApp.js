@@ -3,6 +3,7 @@ import YTSearch from 'youtube-api-search'
 
 import {API_KEY} from '../../api.js'
 import SearchBar from './search_bar' 
+import {VideoList} from './video_list' 
 
 
 /*-------------------------------------------------*/
@@ -12,7 +13,7 @@ export default class VidApp extends Component {
 		this.state = {
 			videos: [],
 		}
-		YTSearch({key: API_KEY, term: 'surfboards'},  (videos) => {
+		YTSearch({key: API_KEY, term: 'react'},  (videos) => {
 			this.setState({videos: videos})
 		})
 	}
@@ -22,6 +23,7 @@ export default class VidApp extends Component {
 		return (
 		<div> 
 			<SearchBar />
+			<VideoList videos={this.state.videos} />
 		</div>
 	 )
 	}
