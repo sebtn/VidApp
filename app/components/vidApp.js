@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import YTSearch from 'youtube-api-search'
+import _ from 'lodash'
 
 import {API_KEY} from '../../api.js'
 import SearchBar from './search_bar' 
@@ -30,10 +31,11 @@ export default class VidApp extends Component {
 
 /*-------------------------------------------------*/
 	render() {
+		const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 500)
 		return (
 		<div className="main-container ">
 			<h1 >Tube viwer built on reactJs</h1>
-			<SearchBar onSearchTermChange={ term => this.videoSearch(term) } />
+			<SearchBar onSearchTermChange={ videoSearch } />
 			<div className="row"> 
 				<div className="video-box col-xs-12 col-md-8">
 					<VideoDetails video={this.state.selectedVideo} />
