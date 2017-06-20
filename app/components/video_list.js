@@ -15,7 +15,7 @@ export const VideoList = (props) => {
 
 /*-------------------------------------------------*/
 	return (
-			<ul className="col-md-6 list-group">
+			<ul className="list-group">
 				{VideoItems}
 			</ul>
 	)
