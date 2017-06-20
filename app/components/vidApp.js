@@ -33,10 +33,10 @@ export default class VidApp extends Component {
 			<h1 >Tube viwer built on reactJs</h1>
 			<SearchBar />
 			<div className="row"> 
-				<div className="col-sm-8 col-md-8">
+				<div className="video-box col-xs-12 col-md-8">
 					<VideoDetails video={this.state.selectedVideo} />
 				</div>
-				<div className="col-sm-4 col-md-4  ">
+				<div className=" col-xs-12 col-md-4 ">
 					<VideoList 
 						onVideoSelect={ selectedVideo => this.setState({selectedVideo}) }
 						videos={this.state.videos} 

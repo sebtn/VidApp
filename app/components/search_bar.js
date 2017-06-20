@@ -21,14 +21,14 @@ onInputChange = (event) => {
 		return (
 		<div className="search-bar-container">
 			<div className="row">
-				<div className="col-sm-1 col-md-1 col-lg-3"></div>
-				<div className="form-group col-sm-10 col-md-10 col-lg-6">
-					<input type="text" placeholder="Search bar" 
+				<div className="col-sm-1 col-md-2 col-lg-4"></div>
+				<div className="form-group col-sm-10 col-md-8 col-lg-4">
+					<input type="text" placeholder="Search a vid" 
 						className="form-control "
 						onChange = {this.onInputChange} ref="SearchBar" 
 					/>
 				</div>
-				<div className="col-sm-1 col-md-1 col-lg-3"></div>
+				<div className="col-sm-1 col-md-2 col-lg-4"></div>
 			</div>
 		</div>
 		)

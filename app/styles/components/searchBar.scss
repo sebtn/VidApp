@@ -1,4 +1,39 @@
 .search-bar-container {
 	margin: 2.5rem 1rem;
-
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		    color: $placeholder-letter;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		   color: $placeholder-letter;
+		   opacity:  1;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		   color: $placeholder-letter;
+		   opacity:  1;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		   color: $placeholder-letter;
+		}
+		::-ms-input-placeholder { /* Microsoft Edge */
+		   color: $placeholder-letter;
+		}
+	& .form-control {
+		margin: 1.25rem 0;
+		outline: none;
+		-webkit-box-shadow: 0 4px 6px -6px $box-shadow-border;
+		-moz-box-shadow: 0 4px 6px -6px $box-shadow-border;
+		box-shadow: 0 4px 6px -6px $box-shadow-border;
+		border: 0;
+		border-bottom: 1px solid $placeholder-letter;
+		min-height: 4.75rem;
+		font-size: 2.0rem;
+			& focus {
+				outline: none;
+				-webkit-box-shadow: 0 4px 6px -6px $box-shadow-border;
+				-moz-box-shadow: 0 4px 6px -6px $box-shadow-border;
+				box-shadow: 0 4px 6px -6px $box-shadow-border;
+				border: 0;
+				border-bottom: 1px solid $placeholder-letter
+			}	
+	}
 }
