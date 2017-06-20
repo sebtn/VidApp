@@ -12,8 +12,9 @@ export default class SearchBar extends Component {
 /*-------------------------------------------------*/
 onInputChange = (event) => {
 	event.preventDefault()
-	let textCapture = this.refs.SearchBar.value
-	this.setState({term: textCapture}) 
+	let term = this.refs.SearchBar.value
+	this.setState({term}) 
+	this.props.onSearchTermChange(term)
 }
 
 /*-------------------------------------------------*/

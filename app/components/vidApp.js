@@ -15,7 +15,12 @@ export default class VidApp extends Component {
 			videos: [],
 			selectedVideo: null,
 		}
-		YTSearch({key: API_KEY, term: 'jazz'},  (videos) => {
+		this.videoSearch('surfing')
+	}
+
+/*-------------------------------------------------*/
+	videoSearch = (term) => {
+		YTSearch({key: API_KEY, term: term},  (videos) => {
 			this.setState({
 				videos: videos, 
 				selectedVideo: videos[0]
@@ -24,14 +29,11 @@ export default class VidApp extends Component {
 	}
 
 /*-------------------------------------------------*/
-
-
-/*-------------------------------------------------*/
 	render() {
 		return (
 		<div className="main-container ">
 			<h1 >Tube viwer built on reactJs</h1>
-			<SearchBar />
+			<SearchBar onSearchTermChange={ term => this.videoSearch(term) } />
 			<div className="row"> 
 				<div className="video-box col-xs-12 col-md-8">
 					<VideoDetails video={this.state.selectedVideo} />
