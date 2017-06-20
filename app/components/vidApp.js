@@ -13,19 +13,29 @@ export default class VidApp extends Component {
 		super(props)
 		this.state = {
 			videos: [],
+			selectedVideo: null,
 		}
-		YTSearch({key: API_KEY, term: 'react'},  (videos) => {
-			this.setState({videos: videos})
+		YTSearch({key: API_KEY, term: 'jazz'},  (videos) => {
+			this.setState({
+				videos: videos, 
+				selectedVideo: videos[0]
+			})
 		})
 	}
+
+/*-------------------------------------------------*/
+
 
 /*-------------------------------------------------*/
 	render() {
 		return (
 		<div> 
 			<SearchBar />
-			<VideoDetails video={this.state.videos[0]} />
-			<VideoList videos={this.state.videos} />
+			<VideoDetails video={this.state.selectedVideo} />
+			<VideoList 
+				onVideoSelect={ selectedVideo => this.setState({selectedVideo}) }
+				videos={this.state.videos} 
+			/>
 		</div>
 	 )
 	}

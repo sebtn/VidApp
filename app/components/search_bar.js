@@ -19,9 +19,17 @@ onInputChange = (event) => {
 /*-------------------------------------------------*/
 	render() {
 		return (
-		<div>
-			<input type="text" placeholder="Search bar" 
-			onChange = {this.onInputChange} ref="SearchBar" />
+		<div className="search-bar-container">
+			<div className="row">
+				<div className="col-sm-1 col-md-1 col-lg-3"></div>
+				<div className="form-group col-sm-10 col-md-10 col-lg-6">
+					<input type="text" placeholder="Search bar" 
+						className="form-control "
+						onChange = {this.onInputChange} ref="SearchBar" 
+					/>
+				</div>
+				<div className="col-sm-1 col-md-1 col-lg-3"></div>
+			</div>
 		</div>
 		)
 	}
