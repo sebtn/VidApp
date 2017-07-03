@@ -7,7 +7,6 @@ import SearchBar from './search_bar'
 import {VideoList} from './video_list' 
 import {VideoDetails} from './video_details' 
 
-
 /*-------------------------------------------------*/
 export default class VidApp extends Component {
 	constructor(props) {

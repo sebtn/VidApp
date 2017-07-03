@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-
 import {VideoListItem} from './video_list_item'
 
 /*Functional or presentational component*/
